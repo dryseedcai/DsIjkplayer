@@ -1,5 +1,4 @@
 /*
- * Copyright (C) 2015 Bilibili
  * Copyright (C) 2015 Zhang Rui <bbcallen@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -298,6 +297,9 @@ public class TextureRenderView extends TextureView implements IRenderView {
 
         @Override
         public void onSurfaceTextureUpdated(SurfaceTexture surface) {
+            for (IRenderCallback renderCallback : mRenderCallbackMap.keySet()) {
+                renderCallback.onSurfaceTextureUpdated();
+            }
         }
 
         //-------------------------

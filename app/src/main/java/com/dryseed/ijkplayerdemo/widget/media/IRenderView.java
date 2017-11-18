@@ -1,5 +1,4 @@
 /*
- * Copyright (C) 2015 Bilibili
  * Copyright (C) 2015 Zhang Rui <bbcallen@gmail.com>
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -16,7 +15,6 @@
  */
 
 package com.dryseed.ijkplayerdemo.widget.media;
-
 import android.graphics.SurfaceTexture;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -83,5 +81,7 @@ public interface IRenderView {
         void onSurfaceChanged(@NonNull ISurfaceHolder holder, int format, int width, int height);
 
         void onSurfaceDestroyed(@NonNull ISurfaceHolder holder);
+
+        void onSurfaceTextureUpdated();
     }
 }
